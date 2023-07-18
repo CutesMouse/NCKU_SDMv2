@@ -27,9 +27,13 @@ body {
 .line {
     display: inline-block;
     color: #7C7C7C;
-    font-size: 70px;
+    font-size: 60px;
     font-weight: normal;
     font-family: "syofong";
+}
+
+.medicine {
+    display: flex;
 }
 
 .medicine img {
@@ -50,5 +54,6 @@ body {
 }
 
 .auto_img {
-    max-height: 60vh;
+    max-width: 28vw;
+    max-height: 70vh;
 }
