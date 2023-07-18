@@ -32,10 +32,14 @@ hr {
 }
 
 .name {
+    display: flex;
     font-size: 25px;
     padding: 2vmin;
     font-family: "微軟正黑體", serif;
     font-weight: bolder;
+    min-height: 10vh;
+    align-items: center;
+    justify-content: center;
 }
 
 .qr img {
