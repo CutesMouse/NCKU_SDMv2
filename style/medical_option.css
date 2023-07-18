@@ -31,7 +31,7 @@ body {
 }
 
 .description {
-    height: 50%;
+    max-width: 50vw;
 }
 
 .highlight {
