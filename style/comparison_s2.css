@@ -1,0 +1,50 @@
+body {
+    text-align: center;
+}
+
+.calculator {
+    text-align: left;
+    font-size: 35px;
+    margin: 5% 5% 5%;
+    padding-left: 3%;
+    font-family: "微軟正黑體", serif;
+    font-weight: bolder;
+}
+
+label {
+    display: block;
+    background: radial-gradient(circle at center, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+}
+
+input {
+    margin-left: 5%;
+    font-size: 30px;
+}
+.calc {
+    font-size: 30px;
+    height: 50px;
+    min-height: 50px;
+    max-height: 50px;
+    max-width: 20%;
+    padding: 0;
+}
+
+.hidden {
+    display: none;
+}
+
+.highlight {
+    font-size: 40px;
+    color: #D07378;
+    font-family: "微軟正黑體", serif;
+    font-weight: bolder;
+}
+
+.attachment {
+    max-width: 90vw;
+    max-height: 70vh;
+    border: #ff5a1f solid 5px;
+    background: white;
+    cursor: pointer;
+}
+

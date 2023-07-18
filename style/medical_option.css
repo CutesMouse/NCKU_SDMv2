@@ -1,0 +1,50 @@
+body {
+    text-align: center;
+}
+
+.detail {
+    font-weight: bolder;
+    color: #7D7D7D;
+}
+
+.detail::before {
+    content: "●";
+    color: #DA7695;
+}
+
+.number {
+    font-size: 60px;
+}
+
+.option_box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.option {
+}
+
+.option_img {
+    width: 28%;
+    height: 28%;
+}
+
+.description {
+    height: 50%;
+}
+
+.highlight {
+    font-size: 40px;
+    color: #D07378;
+    font-family: "微軟正黑體", serif;
+    font-weight: bolder;
+}
+
+.highlight2 {
+    color: #31A7A9;
+}
+
+.option .paragraph {
+    margin-left: 80px;
+}

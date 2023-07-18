@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="tw">
+<head>
+    <meta charset="UTF-8">
+    <title>治療選項比較 - 測驗結果</title>
+    <link rel="stylesheet" href="style/background.css">
+    <link rel="stylesheet" href="style/content.css">
+    <link rel="stylesheet" href="style/comparison_result.css">
+    <link rel="stylesheet" href="style/menu.css">
+    <script src="script/comparison_result.js"></script>
+    <link rel="icon" href="resources/favicon.ico" type="image/x-icon"/>
+</head>
+<body>
+<div class="menu" onclick="window.open('dictionary.html', '_self')">
+    <img class="menu-logo" src="resources/menu.png" alt="回首頁"/>
+</div>
+<span class="point paragraph">您的選擇如下</span>
+<span class="paragraph content">已經確認好治療方式了嗎？</span>
+<div class="table">
+    <table>
+        <thead>
+        <tr>
+            <th></th>
+            <td>單標靶<br>(在意程度得分 <span id="pts_0"></span> 分)</td>
+            <td>雙標靶<br>(在意程度得分 <span id="pts_1"></span> 分)</td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr id="r4">
+            <th><span id="c4h"></span> ★★★★</th>
+            <td><span id="c40"></span></td>
+            <td><span id="c41"></span></td>
+        </tr>
+        <tr id="r3">
+            <th><span id="c3h"></span> ★★★</th>
+            <td><span id="c30"></span></td>
+            <td><span id="c31"></span></td>
+        </tr>
+        <tr id="r2">
+            <th><span id="c2h"></span> ★★</th>
+            <td><span id="c20"></span></td>
+            <td><span id="c21"></span></td>
+        </tr>
+        <tr id="r1">
+            <th><span id="c1h"></span> ★</th>
+            <td><span id="c10"></span></td>
+            <td><span id="c11"></span></td>
+        </tr>
+        </tbody>
+    </table>
+    <img src="resources/comparison/nurse.png"/>
+</div>
+<button onclick="window.open('more_info.html', '_self')">了解更多資訊及資源</button>
+</body>
+</html>

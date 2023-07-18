@@ -1,0 +1,8 @@
+body {
+    background: white;
+}
+
+@font-face {
+    font-family: 'syofong';
+    src: url('../font/syofong.ttc') format("truetype")
+}

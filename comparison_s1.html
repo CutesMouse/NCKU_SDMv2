@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>治療選項比較 步驟一</title>
+    <link rel="stylesheet" href="style/background.css">
+    <link rel="stylesheet" href="style/content.css">
+    <link rel="stylesheet" href="style/understanding.css">
+    <link rel="stylesheet" href="style/menu.css">
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="script/comparison_select.js"></script>
+    <link rel="icon" href="resources/favicon.ico" type="image/x-icon"/>
+</head>
+<body>
+<div class="menu" onclick="window.open('dictionary.html', '_self')">
+    <img class="menu-logo" src="resources/menu.png" alt="回首頁"/>
+</div>
+<span class="paragraph">請透過以下步驟幫助您做決定</span>
+<span class="point paragraph">步驟1. 關於選擇單標靶和雙標靶</span>
+<span class="paragraph content">您考量的因素為（可複選）…</span>
+<div class="option-block">
+    <div class="upper">
+        <img class="option" id="fee" src="resources/comparison/factors/fee.png" alt="費用" onclick="select(0)"/>
+        <img class="option" id="effect" src="resources/comparison/factors/effect.png" alt="療效" onclick="select(1)"/>
+    </div>
+    <div class="lower">
+        <img class="option" id="time" src="resources/comparison/factors/time.png" alt="注射時間" onclick="select(2)"/>
+        <img class="option" id="side_effect" src="resources/comparison/factors/side_effect.png" alt="副作用"
+             onclick="select(3)"/>
+    </div>
+</div>
+<button class="finish" onclick="submit()">我選好了</button>
+</body>
+</html>

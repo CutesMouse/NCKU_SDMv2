@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>治療選項比較</title>
+    <link rel="stylesheet" href="style/background.css">
+    <link rel="stylesheet" href="style/content.css">
+    <link rel="stylesheet" href="style/comparison.css">
+    <link rel="stylesheet" href="style/menu.css">
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="script/comparison_drag.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <script src="script/touch_punch.js"></script>
+    <link rel="icon" href="resources/favicon.ico" type="image/x-icon"/>
+</head>
+<body>
+<div class="menu" onclick="window.open('dictionary.html', '_self')">
+    <img class="menu-logo" src="resources/menu.png" alt="回首頁"/>
+</div>
+<span class="point paragraph">步驟3. 將您考量的因素進行重要排序</span>
+<ul class="slides">
+    <li class="option fee" prefix="★★★★" id="fee">費用</li>
+    <li class="option effect" prefix="★★★" id="effect">治療效果</li>
+    <li class="option time" prefix="★★" id="time">注射時間</li>
+    <li class="option side_effect" prefix="★" id="side_effect">副作用</li>
+</ul>
+<button class="finish">我選好了</button>
+</body>
+</html>

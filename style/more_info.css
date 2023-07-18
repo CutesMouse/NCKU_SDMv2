@@ -1,0 +1,45 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 97vh;
+}
+
+.block {
+    width: 70vw;
+    height: 70vh;
+    background-color: #F5ABB8;
+    border-radius: 30px;
+    text-align: center;
+}
+
+.upper {
+    display: inline-block;
+    font-family: "微軟正黑體", serif;
+    color: white;
+    font-size: 50px;
+    font-weight: bolder;
+    padding: 3vmin;
+}
+
+hr {
+    border-color: white;
+}
+
+.lower {
+    display: flex;
+    flex-direction: row;
+}
+
+.name {
+    font-size: 25px;
+    padding: 2vmin;
+    font-family: "微軟正黑體", serif;
+    font-weight: bolder;
+}
+
+.qr img {
+    background-color: white;
+    padding: 2vmin;
+    max-width: 70%;
+}

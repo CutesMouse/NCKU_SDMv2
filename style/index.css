@@ -1,0 +1,54 @@
+body {
+    width: 97vw;
+    height: 97vh;
+}
+
+.title_box {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+}
+
+.horizontal_box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.line {
+    display: inline-block;
+    color: #7C7C7C;
+    font-size: 70px;
+    font-weight: normal;
+    font-family: "syofong";
+}
+
+.medicine img {
+    max-width: 33vw;
+}
+
+.highlight {
+    color: #E6799B;
+}
+
+.begin {
+    width: 60%;
+    min-height: 10vh;
+    font-size: 70px;
+    padding: 20px;
+    margin-top: 3%;
+    font-family: syofong;
+}
+
+.auto_img {
+    max-height: 60vh;
+}

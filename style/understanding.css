@@ -1,0 +1,44 @@
+.option-block {
+    display: inline-block;
+    margin-top: 3vh;
+}
+
+.option {
+    display: inline-block;
+    height: 50vh;
+    transition: all 0.5s;
+    filter: grayscale(90%);
+    cursor: pointer;
+    padding: 2vw;
+    border-radius: 2vw;
+}
+
+.option:hover {
+    filter: grayscale(0);
+}
+
+
+.option {
+    max-height: 100%;
+}
+
+.selected {
+    background: repeating-linear-gradient(
+            45deg,
+            #ffe7c3,
+            #ffe7c3 10px,
+            #ffbb8e 10px,
+            #ffbb8e 20px
+    );
+    filter: grayscale(0);
+}
+
+body {
+    text-align: center;
+}
+
+.nurse {
+    display: block;
+    max-width: 40vmin;
+    margin: 0 auto;
+}

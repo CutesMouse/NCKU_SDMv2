@@ -1,0 +1,65 @@
+body {
+    text-align: center;
+}
+
+.option {
+    margin: 30px;
+    font-size: 75px;
+    display: block;
+    background: white;
+    font-family: "微軟正黑體", serif;
+    font-weight: bolder;
+    padding: 10px;
+    border-radius: 15px;
+    cursor: pointer;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -o-user-select:none;
+    user-select:none;
+}
+
+.fee::before {
+    background: url("../resources/comparison/fee.png") no-repeat center, white;
+}
+
+.effect::before {
+    background: url("../resources/comparison/effect.png") no-repeat center, white;
+}
+
+.time::before {
+    background: url("../resources/comparison/time.png") no-repeat center, white;
+}
+
+.side_effect::before {
+    background: url("../resources/comparison/side_effect.png") no-repeat center, white;
+}
+
+.option::before {
+    border-radius: 65px;
+    border-color: rgb(191, 224, 213);
+    border-width: 8px;
+    border-style: solid;
+
+    background-size: 90px;
+    display: inline-block;
+    width: 130px;
+    height: 130px;
+    content: "";
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.option::after {
+    position: absolute;
+    vertical-align: middle;
+    right: 5%;
+    text-align: left;
+    content: attr(prefix);
+}
+
+.slides {
+    text-align: left;
+    background: radial-gradient(circle at center, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+    border-radius: 10px;
+    padding: 20px 0;
+}

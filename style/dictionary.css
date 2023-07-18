@@ -1,0 +1,70 @@
+body {
+    width: 98vw;
+    height: 98vh;
+}
+
+
+.block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    min-height: 30vh;
+    width: 100%;
+    font-family: "微軟正黑體", serif;
+    font-weight: bold;
+    font-size: 8vmin;
+    color: white;
+    cursor: pointer;
+    filter: grayscale(20%);
+    transition: .3s;
+}
+
+.button:hover {
+    filter: grayscale(0);
+}
+
+.button::before {
+    font-size: 100px;
+    font-weight: bolder;
+    margin: 2% 5%;
+    padding: 2%;
+    background: white;
+}
+
+.button:nth-child(1)::before {
+    content: "01";
+    color: #87CACE;
+}
+
+.button:nth-child(2)::before {
+    content: "02";
+    color: #E07775;
+}
+
+.button:nth-child(1) {
+    background: #87CACE;
+}
+
+.button:nth-child(2) {
+    background: #E07775;
+}
+
+
+img {
+    max-height: 70vh;
+    max-width: 30vw;
+    height: auto;
+    width: auto;
+    margin: 3vh;
+    cursor: pointer;
+}
