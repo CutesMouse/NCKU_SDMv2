@@ -7,7 +7,6 @@ body {
 
 .block {
     width: 70vw;
-    height: 70vh;
     background-color: #F5ABB8;
     border-radius: 30px;
     text-align: center;
@@ -42,4 +41,8 @@ hr {
     background-color: white;
     padding: 2vmin;
     max-width: 70%;
+}
+
+.item {
+    padding-bottom: 5vh;
 }
