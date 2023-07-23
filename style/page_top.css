@@ -1,0 +1,55 @@
+.page_top {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    min-height: 30vmin;
+    width: 100%;
+    font-family: "微軟正黑體", serif;
+    font-weight: bold;
+    font-size: 8vmin;
+    color: white;
+}
+
+.page_top::before {
+    font-size: 100px;
+    font-weight: bolder;
+    margin: 2% 5%;
+    padding: 2%;
+    background: white;
+}
+
+.step1 {
+    background: #87CACE;
+}
+
+.step1_5 {
+    background: #C1DE9F;
+}
+
+.step2 {
+    background: #E07775;
+}
+
+.step2_5 {
+    background: #F5ABB8;
+}
+
+.step1::before {
+    content: "01";
+    color: #87CACE;
+}
+
+.step1_5::before {
+    content: "01";
+    color: #C1DE9F;
+}
+
+.step2::before {
+    content: "02";
+    color: #E07775;
+}
+
+.step2_5::before {
+    content: "02";
+    color: #F5ABB8;
+}

@@ -7,12 +7,16 @@
     <link rel="stylesheet" href="style/content.css">
     <link rel="stylesheet" href="style/medical_option.css">
     <link rel="stylesheet" href="style/menu.css">
+    <link rel="stylesheet" href="style/page_top.css">
+    <link rel="stylesheet" href="style/clickhint_button.css">
     <link rel="icon" href="resources/favicon.ico" type="image/x-icon"/>
 </head>
 <body>
 <div class="menu" onclick="window.open('dictionary.html', '_self')">
     <img class="menu-logo" src="resources/menu.png" alt="回首頁"/>
 </div>
+
+<div class="page_top step1">HER2陽性藥物<br>選擇「單標靶」或「雙標靶」</div>
 
 <span class="paragraph point">化學治療</span>
 <div class="option_box">
@@ -66,8 +70,9 @@
         <img src="resources/therapy/opt_after.png" alt="雙標靶治療">
     </div>
 </div>
-
-
-<button onclick="window.open('understanding.html', '_self')">了解您的想法</button>
+<div class="button_block">
+    <button onclick="window.open('understanding.html', '_self')">了解您的想法</button>
+    <div class="click_hint content_button next"></div>
+</div>
 </body>
 </html>

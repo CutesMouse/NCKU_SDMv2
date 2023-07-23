@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="style/understanding.css">
     <link rel="stylesheet" href="style/comparison_s2.css">
     <link rel="stylesheet" href="style/menu.css">
+    <link rel="stylesheet" href="style/page_top.css">
+    <link rel="stylesheet" href="style/clickhint_button.css">
     <link rel="stylesheet" href="style/imgbutton.css">
     <link rel="icon" href="resources/favicon.ico" type="image/x-icon"/>
 </head>
@@ -16,9 +18,13 @@
 <div class="menu" onclick="window.open('dictionary.html', '_self')">
     <img class="menu-logo" src="resources/menu.png" alt="回首頁"/>
 </div>
+
+<div class="page_top step2">治療選項比較<br>費用、效果、時間、療程</div>
+
 <span class="point paragraph">步驟2. 請透過以下步驟幫助您做決定</span>
 <div id="fee" class="hidden">
     <span class="paragraph content">治療費用比較，請選擇較滿意的治療方式。</span>
+    <div class="click_hint comparison_s2_button"></div>
     <img class="attachment fee-img" src="resources/comparison/determine/fee.png" alt="費用"/>
     <hr class="bar"/>
     <div class="paragraph highlight warming">如果有保險，提醒自費部分可以跟保險公司討論是否給付</div>
@@ -27,18 +33,24 @@
 
 <div id="effect" class="hidden">
     <span class="paragraph content">治療效果比較，請選擇較滿意的治療方式。</span>
+    <div class="click_hint comparison_s2_button"></div>
     <img class="attachment effect-img" src="resources/comparison/determine/effect.png" alt="療效"/>
 </div>
 
 <div id="time" class="hidden">
     <span class="paragraph content">注射時間比較，請選擇較滿意的治療方式。</span>
+    <div class="click_hint comparison_s2_button"></div>
     <img class="attachment time-img" src="resources/comparison/determine/time.png" alt="療程"/>
 </div>
 
 <div id="side_effect" class="hidden">
     <span class="paragraph content">副作用比較，請選擇較滿意的治療方式。</span>
+    <div class="click_hint comparison_s2_button"></div>
     <img class="attachment side_effect-img" src="resources/comparison/determine/side_effect.png" alt="副作用"/>
 </div>
-<button onclick="submit()">我選好了</button>
+<div class="button_block">
+    <button onclick="submit()">我選好了</button>
+    <div class="click_hint content_button next hidden"></div>
+</div>
 </body>
 </html>

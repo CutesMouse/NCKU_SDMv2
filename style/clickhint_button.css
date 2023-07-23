@@ -1,0 +1,97 @@
+.click_hint {
+    background: url("../resources/click_hint.png");
+    width: 98px;
+    height: 126px;
+    position: relative;
+    left: 30%;
+    transform: rotate(-45deg) translateY(-90px);
+    animation-name: hint;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    margin-bottom: -126px;
+}
+
+@keyframes hint {
+    0% {
+        opacity: 30%;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
+
+.click_hint::before {
+    position: absolute;
+    content: "點擊進行選擇";
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    color: white;
+    font-size: 40px;
+    width: 240px;
+    transform: rotate(45deg) translateX(-80px) translateY(30px);
+    text-align: center;
+}
+
+.dictionary_button {
+    position: absolute;
+    left: 30vw;
+    top: 0;
+    z-index: 1000;
+}
+
+.content_button {
+    display: inline-block;
+    left: 30vw;
+}
+
+.pos {
+    position: relative;
+}
+
+.understanding_button {
+    top: -130px;
+    left: 85%;
+}
+
+.comparison_s1_button {
+    top: -20vmin;
+    left: 80%;
+}
+.comparison_s2_button {
+    position: absolute;
+    left: 90%;
+}
+
+
+.next::before {
+    content: "下一步";
+}
+
+.decision_pos {
+    position: relative;
+}
+
+.decision {
+    left: 800px;
+    top: 100px;
+    z-index: 0;
+}
+
+.hidden {
+    display: none;
+}
+
+.drag::before {
+    content: "拖動調整優先度";
+    width: 290px;
+}
+
+.more_info::before {
+    content: "點擊了解更多";
+}
+
+.more_info {
+    left: 75vw;
+    top: -100px;
+}

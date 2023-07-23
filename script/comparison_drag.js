@@ -39,6 +39,8 @@ $(function () {
         },
         update: function (event, ui) {
             update_stats();
+            document.querySelectorAll('.next').forEach(item => item.classList.remove('hidden'));
+            document.querySelectorAll('.drag').forEach(item => item.remove());
         }
     }).disableSelection();
 

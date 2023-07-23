@@ -1,4 +1,6 @@
 function select(id) {
+    document.querySelectorAll('.hidden').forEach(item => item.classList.remove('hidden'));
+    document.querySelectorAll('.understanding_button').forEach(item => item.remove());
     document.querySelectorAll('.option')
         .forEach(element => element.classList.remove('selected'));
 

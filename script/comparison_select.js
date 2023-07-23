@@ -1,5 +1,6 @@
 function select(id) {
-
+    document.querySelectorAll('.comparison_s1_button').forEach(item => item.remove());
+    document.querySelectorAll('.next').forEach(item => item.classList.remove('hidden'));
     let selected = undefined;
     switch (id) {
         case 0:

@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="style/content.css">
     <link rel="stylesheet" href="style/comparison.css">
     <link rel="stylesheet" href="style/menu.css">
+    <link rel="stylesheet" href="style/clickhint_button.css">
+    <link rel="stylesheet" href="style/page_top.css">
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <script src="script/comparison_drag.js"></script>
     <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
@@ -17,6 +19,9 @@
 <div class="menu" onclick="window.open('dictionary.html', '_self')">
     <img class="menu-logo" src="resources/menu.png" alt="回首頁"/>
 </div>
+
+<div class="page_top step2">治療選項比較<br>費用、效果、時間、療程</div>
+
 <span class="point paragraph">步驟3. 將您考量的因素進行重要排序</span>
 <ul class="slides">
     <li class="option fee" prefix="★★★★" id="fee">費用</li>
@@ -24,6 +29,10 @@
     <li class="option time" prefix="★★" id="time">注射時間</li>
     <li class="option side_effect" prefix="★" id="side_effect">副作用</li>
 </ul>
-<button class="finish">我選好了</button>
+<div class="click_hint drag"></div>
+<div class="button_block">
+    <button class="finish">我選好了</button>
+    <div class="click_hint content_button next hidden"></div>
+</div>
 </body>
 </html>

@@ -29,20 +29,33 @@ document.addEventListener('DOMContentLoaded', function () {
     document.querySelector('#' + item).classList.remove('hidden');
     document.querySelector('.' + item + "-img").addEventListener('click', function (e) {
         let p_w = e.offsetX / document.querySelector('.' + item + "-img").width;
+        let p_h = e.offsetY / document.querySelector('.' + item + "-img").height;
+        if (item === "fee" && img_url(p_w, p_h)) return;
         if (p_w >= 0.34 && p_w <= 0.66) select(item, 0);
         if (p_w > 0.66 && p_w <= 0.97) select(item, 1);
     });
 }, false);
 
-//calc
-function calc_money() {
-    let fee = parseInt(document.querySelector('#a').value) * parseInt(document.querySelector('#b').value);
-    document.querySelector('#fee_result').innerHTML = "費用: " + fee;
-}
-
 function select(title, id) {
+    document.querySelectorAll('.comparison_s2_button').forEach(item => item.remove());
+    document.querySelectorAll('.next').forEach(item => item.classList.remove('hidden'));
     sel = id;
     document.querySelector('.' + title + '-img').setAttribute('src', 'resources/comparison/determine/' + title + '_' + id + '.png')
+}
+
+function img_url(p_w, p_h) {
+    let url = undefined;
+    // 單標靶淋巴無轉移費用
+    if (p_w >= 0.46 && p_w <= 0.65 && p_h >= 0.44 && p_h <= 0.53) url = "https://docs.google.com/spreadsheets/d/1xHeBhM9t0Es_rWqMNtRmgWV2U_UihbMyeGs8bhMAoHs/edit?usp=sharing";
+    // 雙標靶淋巴無轉移費用
+    if (p_w >= 0.72 && p_w <= 0.92 && p_h >= 0.44 && p_h <= 0.53) url = "https://docs.google.com/spreadsheets/d/1MEj2KW4EpReXw2dpDyoDhlLhbjVfEq8-OfCkopGZ6wg/edit?usp=sharing";
+    // 雙標靶淋巴轉移費用
+    if (p_w >= 0.72 && p_w <= 0.92 && p_h >= 0.76 && p_h <= 0.86) url = "https://docs.google.com/spreadsheets/d/18RQYx0WtjlEDUVbvXUAm0NtbEPx3W4uXX1L4aUaTh-4/edit?usp=sharing";
+    if (url !== undefined) {
+        window.open(url);
+        return true;
+    }
+    return false;
 }
 
 function submit() {

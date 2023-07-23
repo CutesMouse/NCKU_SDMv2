@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="style/content.css">
     <link rel="stylesheet" href="style/understanding.css">
     <link rel="stylesheet" href="style/menu.css">
+    <link rel="stylesheet" href="style/page_top.css">
+    <link rel="stylesheet" href="style/clickhint_button.css">
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <script src="script/comparison_select.js"></script>
     <link rel="icon" href="resources/favicon.ico" type="image/x-icon"/>
@@ -15,6 +17,9 @@
 <div class="menu" onclick="window.open('dictionary.html', '_self')">
     <img class="menu-logo" src="resources/menu.png" alt="回首頁"/>
 </div>
+
+<div class="page_top step2">治療選項比較<br>費用、效果、時間、療程</div>
+
 <span class="paragraph">請透過以下步驟幫助您做決定</span>
 <span class="point paragraph">步驟1. 關於選擇單標靶和雙標靶</span>
 <span class="paragraph content">您考量的因素為（可複選）…</span>
@@ -29,6 +34,10 @@
              onclick="select(3)"/>
     </div>
 </div>
-<button class="finish" onclick="submit()">我選好了</button>
+<div class="click_hint comparison_s1_button"></div>
+<div class="button_block">
+    <button class="finish" onclick="submit()">我選好了</button>
+    <div class="click_hint content_button next hidden"></div>
+</div>
 </body>
 </html>
