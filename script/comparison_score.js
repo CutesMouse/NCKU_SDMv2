@@ -8,6 +8,8 @@ let data_saved = URL.includes('&') ? URL.substring(URL.indexOf('&')) : '';
 let item;
 let sel = undefined;
 
+let calc_mode = "sn";
+
 switch (order[0]) {
     case 'f':
         item = "fee";
@@ -46,16 +48,46 @@ function select(title, id) {
 function img_url(p_w, p_h) {
     let url = undefined;
     // 單標靶淋巴無轉移費用
-    if (p_w >= 0.46 && p_w <= 0.65 && p_h >= 0.44 && p_h <= 0.53) url = "https://docs.google.com/spreadsheets/d/1xHeBhM9t0Es_rWqMNtRmgWV2U_UihbMyeGs8bhMAoHs/edit?usp=sharing";
+    if (p_w >= 0.46 && p_w <= 0.65 && p_h >= 0.44 && p_h <= 0.53) url = 'sn';
     // 雙標靶淋巴無轉移費用
-    if (p_w >= 0.72 && p_w <= 0.92 && p_h >= 0.44 && p_h <= 0.53) url = "https://docs.google.com/spreadsheets/d/1MEj2KW4EpReXw2dpDyoDhlLhbjVfEq8-OfCkopGZ6wg/edit?usp=sharing";
+    if (p_w >= 0.72 && p_w <= 0.92 && p_h >= 0.44 && p_h <= 0.53) url = "dn";
     // 雙標靶淋巴轉移費用
-    if (p_w >= 0.72 && p_w <= 0.92 && p_h >= 0.76 && p_h <= 0.86) url = "https://docs.google.com/spreadsheets/d/18RQYx0WtjlEDUVbvXUAm0NtbEPx3W4uXX1L4aUaTh-4/edit?usp=sharing";
+    if (p_w >= 0.72 && p_w <= 0.92 && p_h >= 0.76 && p_h <= 0.86) url = "dy";
     if (url !== undefined) {
-        window.open(url);
+        window.open(`#${url}-calculator`, '_self');
+        show_calc(url);
         return true;
     }
     return false;
+}
+
+function show_calc(mode) {
+    calc_mode = mode;
+    document.querySelector('.calc_title').classList.remove('calc_hidden');
+    resetCalc();
+    switch (calc_mode) {
+        case "sn":
+            document.querySelector('#sn-calculator').classList.remove('calc_hidden');
+            document.querySelector('.calc_ptr1').classList.add('single_color');
+            document.querySelector('.calc_ptr1').innerHTML = "單標靶";
+            document.querySelector('.calc_ptr2').classList.add('no_swift_color');
+            document.querySelector('.calc_ptr2').innerHTML = "淋巴無轉移";
+            break;
+        case "dn":
+            document.querySelector('#dn-calculator').classList.remove('calc_hidden');
+            document.querySelector('.calc_ptr1').classList.add('double_color');
+            document.querySelector('.calc_ptr1').innerHTML = "雙標靶";
+            document.querySelector('.calc_ptr2').classList.add('no_swift_color');
+            document.querySelector('.calc_ptr2').innerHTML = "淋巴無轉移";
+            break;
+        case "dy":
+            document.querySelector('#dy-calculator').classList.remove('calc_hidden');
+            document.querySelector('.calc_ptr1').classList.add('double_color');
+            document.querySelector('.calc_ptr1').innerHTML = "雙標靶";
+            document.querySelector('.calc_ptr2').classList.add('swift_color');
+            document.querySelector('.calc_ptr2').innerHTML = "淋巴轉移";
+            break;
+    }
 }
 
 function submit() {
@@ -70,4 +102,125 @@ function submit() {
         return;
     }
     window.open('comparison_s2.html?care=' + order + data_saved, '_self');
+}
+
+function reset_result() {
+    document.querySelectorAll(`.${calc_mode}-result .lower`).forEach(item => item.classList.remove('lower'));
+    document.querySelector(`.${calc_mode}-result`).classList.add('calc_hidden');
+}
+
+function resetCalc() {
+    document.querySelector('#sn-calculator').classList.add('calc_hidden');
+    document.querySelector('#dn-calculator').classList.add('calc_hidden');
+    document.querySelector('#dy-calculator').classList.add('calc_hidden');
+    document.querySelector('.calc_ptr1').classList.remove('double_color');
+    document.querySelector('.calc_ptr2').classList.remove('swift_color');
+}
+
+function str(num) {
+    num = Math.round(num);
+    let result = "";
+    while (num >= 1000) {
+        let left = num % 1000;
+        if (left < 10) result = "00"+left.toString() + result;
+        else if (left < 100) result = "0"+left.toString() + result;
+        else result = left.toString() + result;
+        num /= 1000;
+        num = Math.floor(num);
+        result = ","+result;
+    }
+    result = num + result;
+    return result;
+}
+
+function calc_sn() {
+    reset_result();
+    let weight = document.querySelector('#sn-weight').value;
+    let vein = document.querySelector('#sn-vein').value;
+    let surface = document.querySelector('#sn-surface').value;
+    if (weight === '' || vein === '' || surface === '') {
+        alert('請填寫完整資料!');
+        return;
+    }
+
+    let v_18 = (vein / 440) * 8 * weight + (vein / 440) * 6 * 17 * weight;
+    let v_1 = (vein / 440) * 6 * weight;
+
+    let s_18 = surface * 18;
+    let s_1 = surface;
+
+    if (v_18 < s_18) document.querySelector('#sn-v_18').classList.add('lower');
+    if (v_18 > s_18) document.querySelector('#sn-s_18').classList.add('lower');
+    if (v_1 < s_1) document.querySelector('#sn-v_1').classList.add('lower');
+    if (v_1 > s_1) document.querySelector('#sn-s_1').classList.add('lower');
+
+    let d_18 = Math.abs(v_18 - s_18);
+    let d_1 = Math.abs(v_1 - s_1);
+
+    document.querySelector('#sn-v_18').innerHTML = str(v_18);
+    document.querySelector('#sn-v_1').innerHTML = str(v_1);
+    document.querySelector('#sn-s_18').innerHTML = str(s_18);
+    document.querySelector('#sn-s_1').innerHTML = str(s_1);
+    document.querySelector('#sn-d_18').innerHTML = str(d_18);
+    document.querySelector('#sn-d_1').innerHTML = str(d_1);
+    document.querySelector('.sn-result').classList.remove('calc_hidden');
+}
+function calc_dn() {
+    reset_result();
+    let weight = document.querySelector('#dn-weight').value;
+    let vein = document.querySelector('#dn-vein').value;
+    let hvein = document.querySelector('#dn-hvein').value;
+    let surface = document.querySelector('#dn-surface').value;
+    if (weight === '' || vein === '' || surface === '' || hvein === '') {
+        alert('請填寫完整資料!');
+        return;
+    }
+
+    let v_18 = (vein / 440) * 8 * weight + (vein / 440) * 6 * 17 * weight;
+    let v_1 = (vein / 440) * 6 * weight;
+
+    let s_18 = surface * 18;
+    let s_1 = surface;
+
+    let v2_18 = hvein * 19;
+    let v2_1 = v2_18 / 18;
+
+    let v3_18 = v_18 + v2_18;
+    let v3_1 = v_1 + v2_1;
+
+    if (v_18 < s_18) document.querySelector('#dn-v_18').classList.add('lower');
+    if (v_18 > s_18) document.querySelector('#dn-s_18').classList.add('lower');
+    if (v_1 < s_1) document.querySelector('#dn-v_1').classList.add('lower');
+    if (v_1 > s_1) document.querySelector('#dn-s_1').classList.add('lower');
+
+    let d_18 = Math.round(Math.abs(v_18 - s_18));
+    let d_1 = Math.round(Math.abs(v_1 - s_1));
+
+    document.querySelector('#dn-v_18').innerHTML = str(v_18);
+    document.querySelector('#dn-v_1').innerHTML = str(v_1);
+    document.querySelector('#dn-s_18').innerHTML = str(s_18);
+    document.querySelector('#dn-s_1').innerHTML = str(s_1);
+    document.querySelector('#dn-d_18').innerHTML = str(d_18);
+    document.querySelector('#dn-d_1').innerHTML = str(d_1);
+    document.querySelector('#dn-v2_18').innerHTML = str(v2_18);
+    document.querySelector('#dn-v2_1').innerHTML = str(v2_1);
+    document.querySelector('#dn-v3_18').innerHTML = str(v3_18);
+    document.querySelector('#dn-v3_1').innerHTML = str(v3_1);
+    document.querySelector('.dn-result').classList.remove('calc_hidden');
+}
+function calc_dy() {
+    reset_result();
+    let weight = document.querySelector('#dy-weight').value;
+    let hvein = document.querySelector('#dy-hvein').value;
+    if (weight === '' || hvein === '') {
+        alert('請填寫完整資料!');
+        return;
+    }
+
+    let v_18 = hvein * 19;
+    let v_1 = v_18 / 18;
+
+    document.querySelector('#dy-v_18').innerHTML = str(v_18);
+    document.querySelector('#dy-v_1').innerHTML = str(v_1);
+    document.querySelector('.dy-result').classList.remove('calc_hidden');
 }

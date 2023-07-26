@@ -3,7 +3,7 @@ body {
 }
 
 .calculator {
-    text-align: left;
+    text-align: center;
     font-size: 35px;
     margin: 5% 5% 5%;
     padding-left: 3%;
@@ -12,8 +12,16 @@ body {
 }
 
 label {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background: radial-gradient(circle at center, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+    padding: 10px 0;
+}
+
+.tag {
+    width: 360px;
+    text-align: center;
 }
 
 input {
@@ -48,3 +56,78 @@ input {
     cursor: pointer;
 }
 
+table {
+    width: 80%;
+    margin: 0 auto;
+    font-family: "微軟正黑體", serif;
+    font-size: 30px;
+}
+
+td {
+    padding: 2% 3%;
+}
+
+thead {
+    font-weight: bolder;
+    font-size: 35px;
+}
+
+td:nth-child(1) {
+    width: 25%;
+    font-weight: bolder;
+    font-size: 35px;
+}
+
+.description {
+    font-size: 25px;
+}
+
+.calc_hidden {
+    display: none;
+}
+
+.lower {
+    color: green;
+    font-weight: bolder;
+}
+
+.single_color {
+    color: black;
+    background-color: #BFDFA4;
+}
+
+.double_color {
+    color: black;
+    background-color: #FAAAB7;
+}
+
+.no_swift_color {
+    color: black;
+    background-color: lightgreen;
+}
+
+.swift_color {
+    color: black;
+    background-color: lightpink;
+}
+
+.sing_thead {
+    background: #BFDFA4;
+}
+
+.sing_tbody {
+    background: #DCEED4;
+}
+
+.doub_thead {
+    background: #FAAAB7;
+}
+
+.doub_tbody {
+    background: #FEE0E1;
+}
+
+.calc_result {
+    margin-top: 50px;
+    text-align: center;
+}
