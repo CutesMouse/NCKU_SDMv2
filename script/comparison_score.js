@@ -54,8 +54,8 @@ function img_url(p_w, p_h) {
     // 雙標靶淋巴轉移費用
     if (p_w >= 0.72 && p_w <= 0.92 && p_h >= 0.76 && p_h <= 0.86) url = "dy";
     if (url !== undefined) {
-        window.open(`#${url}-calculator`, '_self');
         show_calc(url);
+        window.open(`#${url}-calculator`, '_self');
         return true;
     }
     return false;
@@ -182,8 +182,8 @@ function calc_dn() {
     let s_18 = surface * 18;
     let s_1 = surface;
 
-    let v2_18 = hvein * 19;
-    let v2_1 = v2_18 / 18;
+    let v2_18 = hvein * 18;
+    let v2_1 = hvein;
 
     let v3_18 = v_18 + v2_18;
     let v3_1 = v_1 + v2_1;
@@ -217,8 +217,8 @@ function calc_dy() {
         return;
     }
 
-    let v_18 = hvein * 19;
-    let v_1 = v_18 / 18;
+    let v_18 = hvein * 18;
+    let v_1 = hvein;
 
     document.querySelector('#dy-v_18').innerHTML = str(v_18);
     document.querySelector('#dy-v_1').innerHTML = str(v_1);
