@@ -34,9 +34,9 @@
     
     <div class="calculator calc_hidden" id="sn-calculator">
         <label><span class="tag">體重</span><input type="number" id="sn-weight" placeholder="例如：50 (公斤)"></label>
-        <label><span class="tag">靜脈注射</span><input type="number" id="sn-vein" placeholder="51883 (2023年本院藥價)"
+        <label><span class="tag">賀癌平靜脈注射</span><input type="number" id="sn-vein" placeholder="51883 (2023年本院藥價)"
                                                   value="51883"></label>
-        <label><span class="tag">皮下注射</span><input type="number" id="sn-surface" placeholder="42854 (2023年本院藥價)"
+        <label><span class="tag">賀癌平皮下注射</span><input type="number" id="sn-surface" placeholder="42854 (2023年本院藥價)"
                                                   value="42854"></label>
         <button class="calc" onclick="calc_sn()">計算</button>
         <div class="sn-result calc_result calc_hidden">
@@ -76,12 +76,14 @@
     
     <div class="calculator calc_hidden" id="dn-calculator">
         <label><span class="tag">體重</span><input type="number" id="dn-weight" placeholder="例如：50 (公斤)"></label>
-        <label><span class="tag">靜脈注射</span><input type="number" id="dn-vein" placeholder="51883 (2023年本院藥價)"
+        <label><span class="tag">賀癌平靜脈注射</span><input type="number" id="dn-vein" placeholder="51883 (2023年本院藥價)"
                                                   value="51883"></label>
+        <label><span class="tag">賀癌平皮下注射</span><input type="number" id="dn-surface" placeholder="42854 (2023年本院藥價)"
+                                                             value="42854"></label>
         <label><span class="tag">賀疾妥靜脈注射</span><input type="number" id="dn-hvein" placeholder="74755 (2023年本院藥價)"
                                                   value="74755"></label>
-        <label><span class="tag">皮下注射</span><input type="number" id="dn-surface" placeholder="42854 (2023年本院藥價)"
-                                                  value="42854"></label>
+        <label><span class="tag">賀雙妥皮下注射</span><input type="number" id="dn-dsurface" placeholder="93500 (2023年本院藥價)"
+                                                  value="93500"></label>
         <button class="calc" onclick="calc_dn()">計算</button>
         <div class="dn-result calc_result calc_hidden">
 
@@ -138,7 +140,7 @@
             <div class="paragraph highlight warming">賀疾妥首次需打2支，可申請贈送1支</div>
             <hr class="bar"/>
 
-            <span class="paragraph highlight point">賀癌平 + 賀疾妥 每3星期一次共18次</span>
+            <span class="paragraph highlight point">賀雙妥 每3星期一次共18次</span>
             <table>
                 <thead class="doub_thead">
                 <tr>
@@ -149,7 +151,7 @@
                 </thead>
                 <tbody class="doub_tbody">
                 <tr>
-                    <td>靜脈注射</td>
+                    <td>皮下注射</td>
                     <td id="dn-v3_18"></td>
                     <td id="dn-v3_1"></td>
                 </tr>

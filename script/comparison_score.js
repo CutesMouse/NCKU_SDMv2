@@ -171,7 +171,8 @@ function calc_dn() {
     let vein = document.querySelector('#dn-vein').value;
     let hvein = document.querySelector('#dn-hvein').value;
     let surface = document.querySelector('#dn-surface').value;
-    if (weight === '' || vein === '' || surface === '' || hvein === '') {
+    let dsurface = document.querySelector('#dn-dsurface').value;
+    if (weight === '' || vein === '' || surface === '' || hvein === '' || dsurface === '') {
         alert('請填寫完整資料!');
         return;
     }
@@ -183,10 +184,10 @@ function calc_dn() {
     let s_1 = surface;
 
     let v2_18 = hvein * 18;
-    let v2_1 = hvein;
+    let v2_1 = hvein * 1;
 
-    let v3_18 = v_18 + v2_18;
-    let v3_1 = v_1 + v2_1;
+    let v3_18 = dsurface * 18;
+    let v3_1 = dsurface * 1;
 
     if (v_18 < s_18) document.querySelector('#dn-v_18').classList.add('lower');
     if (v_18 > s_18) document.querySelector('#dn-s_18').classList.add('lower');
