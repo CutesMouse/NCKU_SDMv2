@@ -19,37 +19,37 @@
 }
 
 .step1 {
-    background: #87CACE;
+    background: #8CD0BA;
 }
 
 .step1_5 {
-    background: #C1DE9F;
+    background: #E6B7BE;
 }
 
 .step2 {
-    background: #E07775;
+    background: #BF8A8B;
 }
 
 .step2_5 {
-    background: #F5ABB8;
+    background: #98A4CE;
 }
 
 .step1::before {
     content: "01";
-    color: #87CACE;
+    color: #8CD0BA;
 }
 
 .step1_5::before {
     content: "01";
-    color: #C1DE9F;
+    color: #E6B7BE;
 }
 
 .step2::before {
     content: "02";
-    color: #E07775;
+    color: #BF8A8B;
 }
 
 .step2_5::before {
     content: "02";
-    color: #F5ABB8;
+    color: #98A4CE;
 }

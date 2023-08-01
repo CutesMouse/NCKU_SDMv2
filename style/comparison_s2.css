@@ -93,12 +93,12 @@ td:nth-child(1) {
 
 .single_color {
     color: black;
-    background-color: #BFDFA4;
+    background-color: #DCEBEB;
 }
 
 .double_color {
     color: black;
-    background-color: #FAAAB7;
+    background-color: #F4E6E6;
 }
 
 .no_swift_color {
@@ -112,19 +112,19 @@ td:nth-child(1) {
 }
 
 .sing_thead {
-    background: #BFDFA4;
+    background: #85D1BC;
 }
 
 .sing_tbody {
-    background: #DCEED4;
+    background: #DCEBEB;
 }
 
 .doub_thead {
-    background: #FAAAB7;
+    background: #E5ADAE;
 }
 
 .doub_tbody {
-    background: #FEE0E1;
+    background: #F4E6E6;
 }
 
 .calc_result {

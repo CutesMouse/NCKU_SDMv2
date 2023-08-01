@@ -43,20 +43,20 @@ body {
 
 .button:nth-child(1)::before {
     content: "01";
-    color: #87CACE;
+    color: #8CD0BA;
 }
 
 .button:nth-child(3)::before {
     content: "02";
-    color: #E07775;
+    color: #BF8A8B;
 }
 
 .button:nth-child(1) {
-    background: #87CACE;
+    background: #8CD0BA;
 }
 
 .button:nth-child(3) {
-    background: #E07775;
+    background: #BF8A8B;
 }
 
 

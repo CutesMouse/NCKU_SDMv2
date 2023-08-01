@@ -44,6 +44,14 @@ body {
     color: #E6799B;
 }
 
+.sing {
+    color: #95D0BF;
+}
+
+.doub {
+    color: #B9878F;
+}
+
 .begin {
     width: 60%;
     min-height: 10vh;

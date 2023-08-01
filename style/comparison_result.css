@@ -15,7 +15,7 @@ thead {
 }
 
 tbody td {
-    color: #E07194;
+    color: #CA6871;
 }
 
 tr {
@@ -42,20 +42,28 @@ thead td {
     padding: 1%;
 }
 
-thead th, thead td:nth-child(2n+1) {
-    background-color: #F5ABB8;
+thead th, thead td:nth-child(1) {
+    background-color: #98A4CE;
 }
 
-thead td:nth-child(2n) {
-    background-color: #C1DE9F;
+tbody th, tbody td:nth-child(1) {
+    background-color: #E5EBF1;
 }
 
-tbody th, tbody td:nth-child(2n+1) {
-    background-color: #FCE0E1;
+thead td:nth-child(2) {
+    background-color: #8CD0BA;
 }
 
-tbody td:nth-child(2n) {
-    background-color: #DDEDD2;
+tbody td:nth-child(2) {
+    background-color: #DDEBEB;
+}
+
+thead td:nth-child(3) {
+    background-color: #E2ADAE;
+}
+
+tbody td:nth-child(3) {
+    background-color: #F3E6E6;
 }
 
 .table {
@@ -69,4 +77,8 @@ img {
     display: block;
     max-width: 20%;
     height: 20%;
+}
+
+.point {
+    color: #7B7B7B;
 }

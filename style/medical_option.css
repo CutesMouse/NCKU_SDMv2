@@ -9,7 +9,7 @@ body {
 
 .detail::before {
     content: "●";
-    color: #DA7695;
+    color: #E7B8B9;
 }
 
 .number {
@@ -37,7 +37,7 @@ body {
 
 .highlight {
     font-size: 40px;
-    color: #D07378;
+    color: #DC5D75;
     font-family: "微軟正黑體", serif;
     font-weight: bolder;
 }

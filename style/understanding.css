@@ -42,3 +42,7 @@ body {
     max-width: 40vmin;
     margin: 0 auto;
 }
+
+.point {
+    color: #7B7B7B;
+}

@@ -55,7 +55,7 @@ function img_url(p_w, p_h) {
     if (p_w >= 0.72 && p_w <= 0.92 && p_h >= 0.76 && p_h <= 0.86) url = "dy";
     if (url !== undefined) {
         show_calc(url);
-        window.open(`#${url}-calculator`, '_self');
+        window.open(`#calc_title`, '_self');
         return true;
     }
     return false;
